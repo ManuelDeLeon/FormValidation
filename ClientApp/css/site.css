@@ -1,0 +1,11 @@
+body {
+  background: url("/images/water.jpg") repeat;
+}
+
+#body-main {
+  max-width: 400px;
+}
+
+.pointer {
+    cursor: pointer;
+}

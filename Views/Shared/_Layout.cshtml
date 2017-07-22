@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - WebApplicationBasic</title>
+
+        <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/dist/site.css" asp-append-version="true" />
+
+        <link rel="icon" href="/images/favicon.ico?v=2" type="image/x-icon">
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        @RenderBody()
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyASpfxmUWM9bJDU_PPWbfaYBcTbubsN5Qg",
+    authDomain: "phonebook-1b198.firebaseapp.com",
+    databaseURL: "https://phonebook-1b198.firebaseio.com",
+    projectId: "phonebook-1b198",
+    storageBucket: "",
+    messagingSenderId: "177633841255"
+  };
+  firebase.initializeApp(config);
+</script>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+        <script src="~/dist/vendor.js" asp-append-version="true"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
