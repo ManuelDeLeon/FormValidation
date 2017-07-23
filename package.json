@@ -4,14 +4,19 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env ASPNETCORE_ENVIRONMENT=Development dotnet run",
+    "initialize": "npm install && dotnet restore && build-dev",
     "build-dev": "webpack --progress --config webpack.config.vendor.js && webpack --progress",
-    "prettier": "prettier --write \"ClientApp/components/**/*.js\""
+    "prettier": "prettier --write \"ClientApp/components/**/*.js\"",
+    "test": "jest --watch",
+    "test-single": "jest",
+    "coverage": "jest --coverage || http-server -c-1 -o -p 9875 tests/coverage/lcov-report"
   },
   "dependencies": {
     "aspnet-prerendering": "^2.0.6",
     "aspnet-webpack": "^1.0.29",
     "aspnet-webpack-react": "^2.0.1",
     "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
@@ -23,6 +28,9 @@
     "domain-task": "^3.0.3",
     "event-source-polyfill": "0.0.9",
     "extract-text-webpack-plugin": "2.1.2",
+    "enzyme": "^2.9.1",
+    "http-server": "^0.10.0",
+    "jest-cli": "^20.0.4",
     "file-loader": "0.11.2",
     "history": "4.6.3",
     "jquery": "3.2.1",
@@ -33,6 +41,7 @@
     "react-hot-loader": "3.0.0-beta.7",
     "react-router": "^4.1.1",
     "react-router-dom": "4.1.1",
+    "react-test-renderer": "^15.6.1",
     "semantic-ui": "^2.2.10",
     "style-loader": "0.18.2",
     "url-loader": "0.5.9",
@@ -44,5 +53,10 @@
   },
   "devDependencies": {
     "prettier": "^1.5.3"
+  },
+  "jest": {
+    "roots": [
+      "ClientApp/components"
+    ]
   }
 }

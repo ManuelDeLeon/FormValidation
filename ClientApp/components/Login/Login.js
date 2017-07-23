@@ -29,7 +29,10 @@ Login({
     <div class="ui centered grid">
       <div class="column">
         <div class="ui form segment">
-          <div class="field required" b="class: { error: username.validating || username.invalid && hovering }">
+          <div
+            class="field required"
+            b="class: { error: username.validating || username.invalid && hovering }"
+          >
             <label>Username</label>
             <div
               class="ui icon input"
@@ -40,14 +43,20 @@ Login({
             </div>
           </div>
 
-          <div class="field required" b="class: { error: hovering && email.invalid }">
+          <div
+            class="field required"
+            b="class: { error: hovering && email.invalid }"
+          >
             <label>Email</label>
             <div class="ui icon input">
               <input type="email" placeholder="Email" b="value: email" />
               <i class="mail icon" />
             </div>
           </div>
-          <div class="field required" b="class: { error: hovering && password.invalid }">
+          <div
+            class="field required"
+            b="class: { error: hovering && password.invalid }"
+          >
             <label>Password</label>
             <div class="ui icon input">
               <input
