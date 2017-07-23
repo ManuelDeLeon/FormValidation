@@ -14,7 +14,7 @@ Login({
     .validate(value => this.emailSvc.validEmail(value))
     .invalidMessage(`Valid email is required`),
   password: ViewModel.property.string
-    .validate(value => value.length >= 8)
+    .min(8)
     .invalidMessage(`Password must be at least 8 characters long`),
   createAccount() {
     if (this.valid()) {
